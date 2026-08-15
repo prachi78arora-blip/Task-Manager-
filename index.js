@@ -6,9 +6,7 @@ const Task=require("./models/Task");
 const cors = require("cors");
 const app = express();
 
-app.use(cors({
-    origin: "https://task-manager-frontend-ft0r.onrender.com"
-}));
+app.use(cors());
 
 app.use(express.json());
 
