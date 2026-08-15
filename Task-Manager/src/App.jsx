@@ -12,7 +12,7 @@ const App = () => {
 
   useEffect(()=>{
     const fetchTasks=async()=>{
-     try{ const response=await fetch("https://task-manager-4dc.onrender.com/tasks");
+     try{ const response=await fetch("https://task-manager-t4dc.onrender.com/tasks");
        if (!response.ok) {
         throw new Error("Failed to load tasks");
       }
@@ -38,7 +38,7 @@ try{
     if(editIndex!=null){
       const taskToEdit=tasks[editIndex];
       const response=await fetch(
-        `https://task-manager-4dc.onrender.com/tasks/${taskToEdit._id}`,
+        `https://task-manager-t4dc.onrender.com/tasks/${taskToEdit._id}`,
         {
           method:"PATCH",
           headers:{
@@ -69,7 +69,7 @@ try{
     }
 
 
-    const response = await fetch("https://task-manager-4dc.onrender.com/tasks", {
+    const response = await fetch("https://task-manager-t4dc.onrender.com/tasks", {
   method: "POST",
   headers: {
     "Content-Type": "application/json"
@@ -95,7 +95,7 @@ setTask("");
 
   const deleteTask=async(id)=>{
     try{
-    const response= await fetch(`https://task-manager-4dc.onrender.com/tasks/${id}`,{
+    const response= await fetch(`https://task-manager-t4dc.onrender.com/tasks/${id}`,{
       method:"DELETE"
      });
 
@@ -110,7 +110,7 @@ setTask("");
 };
 
   const toggleTask=async(id,completed)=>{
-   try{const response=await fetch(`https://task-manager-4dc.onrender.com/tasks/${id}`,{
+   try{const response=await fetch(`https://task-manager-t4dc.onrender.com/tasks/${id}`,{
       method:"PATCH",
       headers:{
         "Content-Type":"application/json"
